@@ -20,12 +20,9 @@ const TimeCard = ({ variants='work', category, time }) => {
                     <div className={styles.categoryText}>
                         {category}
                     </div>
-                    <button className={styles.ellipsisButton}>
+                    <div className={styles.ellipsisButton}>
                         <EllipsisIcon />
-                        {/*<img src={'/img/icon-ellipsis.svg'}*/}
-                        {/*     alt={''}*/}
-                        {/*/>*/}
-                    </button>
+                    </div>
                 </div>
                 <div className={styles.bottomSide}>
                     <div className={styles.timeText}>

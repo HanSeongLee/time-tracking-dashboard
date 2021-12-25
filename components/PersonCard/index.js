@@ -15,9 +15,9 @@ const PersonCard = ({ currentMenu, onMenuChange }) => {
                     <div className={styles.subtitle}>
                         Report for
                     </div>
-                    <div className={styles.title}>
+                    <h1 className={styles.title}>
                         Jeremy Robson
-                    </div>
+                    </h1>
                 </div>
             </div>
             <ul className={styles.menu}>
