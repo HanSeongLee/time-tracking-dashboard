@@ -1,0 +1,29 @@
+@import "styles/utils";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+
+  @include media(">desktop") {
+    min-width: 1200px;
+    height: 100vh;
+  }
+
+  .cardContainer {
+    padding: 81px 24px;
+    display: grid;
+    grid-gap: 24px;
+
+    @include media(">desktop") {
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      grid-gap: 30px;
+
+      > div:first-child {
+        grid-row: 1 / 3;
+      }
+    }
+  }
+}

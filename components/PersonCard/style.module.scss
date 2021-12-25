@@ -1,0 +1,100 @@
+@import "styles/utils";
+
+.personCard {
+  background: #1C204B;
+  border-radius: 15px;
+  min-width: 255px;
+  min-height: 160px;
+  overflow: hidden;
+
+  @include media(">desktop") {
+    max-width: 139px;
+  }
+
+  .infoWrapper {
+    display: flex;
+    align-items: center;
+    background: #5747EA;
+    border-radius: 15px;
+    padding: 32px 35px 34px;
+
+    @include media(">desktop") {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 32px 37px 0;
+    }
+
+    .rightSide {
+      margin-left: 20px;
+
+      @include media(">desktop") {
+        margin-left: 0;
+        margin-top: 43px;
+        margin-bottom: 80px;
+      }
+
+      .subtitle {
+        font-size: 15px;
+        line-height: 18px;
+        color: #BBC0FF;
+
+        @include media(">desktop") {
+          font-size: 15px;
+          line-height: 18px;
+        }
+      }
+
+      .title {
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+
+        @include media(">desktop") {
+          font-size: 40px;
+          line-height: 47px;
+        }
+      }
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    padding-top: 24px;
+    padding-bottom: 25px;
+
+    @include media(">desktop") {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 32px 26px 32px;
+    }
+
+    .menuItem {
+      flex: 1;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: center;
+      color: #7078C9;
+      cursor: pointer;
+
+      @include media(">desktop") {
+        margin-bottom: 21px;
+        transition: color 0.3s;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:hover {
+          color: #FFFFFF;
+        }
+      }
+
+      &.active {
+        color: #FFFFFF;
+      }
+    }
+  }
+}

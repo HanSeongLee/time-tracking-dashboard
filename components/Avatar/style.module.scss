@@ -1,0 +1,14 @@
+@import "styles/utils";
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  background: #D8D8D8;
+  border: 3px solid #FFFFFF;
+  border-radius: 50%;
+
+  @include media(">desktop") {
+    width: 78px;
+    height: 78px;
+  }
+}

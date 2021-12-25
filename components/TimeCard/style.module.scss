@@ -1,0 +1,136 @@
+@import "styles/utils";
+
+.timeCard {
+  position: relative;
+  border-radius: 15px;
+  min-width: 255px;
+  min-height: 160px;
+  overflow: hidden;
+  cursor: pointer;
+
+  //@include media(">desktop") {
+  //  .cardBody {
+  //    transition: background 0.3s;
+  //  }
+  //
+  //  &:hover {
+  //    .cardBody {
+  //      background: #33397A;
+  //    }
+  //  }
+  //}
+
+  @mixin backgroundCover($color, $image) {
+    background: $color url($image) no-repeat;
+    background-position: 95% -5%;
+  }
+
+  &.work {
+    @include backgroundCover(#FF8B64, "/img/icon-work.svg");
+  }
+
+  &.play {
+    @include backgroundCover(#55C2E6, "/img/icon-play.svg");
+  }
+
+  &.study {
+    @include backgroundCover(#FF5E7D, "/img/icon-study.svg");
+  }
+
+  &.exercise {
+    @include backgroundCover(#4BCF82, "/img/icon-exercise.svg");
+  }
+
+  &.social {
+    @include backgroundCover(#7335D2, "/img/icon-social.svg");
+  }
+
+  &.selfCare {
+    @include backgroundCover(#F1C75B, "/img/icon-self-care.svg");
+  }
+
+  .cardBody {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 122px;
+    background: #1C204B;
+    border-radius: 15px 15px 0 0 ;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+
+    @include media(">desktop") {
+      min-height: 199px;
+      padding: 29px 35px 30px 30px;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #33397A;
+      }
+    }
+
+    .topSide {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+
+      .categoryText {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      .ellipsisButton {
+        display: flex;
+        padding: 5px;
+        align-items: center;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+
+          > svg {
+            path {
+              fill: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+
+    .bottomSide {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include media(">desktop") {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      .timeText {
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 38px;
+
+        @include media(">desktop") {
+          font-size: 56px;
+          line-height: 66px;
+          margin-bottom: 8px;
+        }
+      }
+
+      .lastWeekTimeText {
+        font-size: 15px;
+        line-height: 18px;
+        color: #BBC0FF;
+      }
+    }
+  }
+}
